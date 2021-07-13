@@ -11,7 +11,7 @@ class People:
         return f'See you later {id(self)}'
 
     def finishs(self):
-        return f'Good Night {id(self)}'
+        return f'Bye {id(self)}'
 
 
 if __name__ == '__main__':
