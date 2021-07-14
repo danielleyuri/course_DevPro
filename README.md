@@ -35,11 +35,11 @@ the following attributes:
     N
 W       E
     S
-    
- Example:
- >>> # Test Motor 
- >>> motor = Motor()
- >>> motor.velocity
+
+Example:
+# Test Motor 
+motor = Motor()
+motor.velocity
  0
  >>> motor.speedup()
  >>> motor.velocity
