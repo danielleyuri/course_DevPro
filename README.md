@@ -1,5 +1,5 @@
 # course_DevPro
-Small Project!
+Small Projects in Python!
 
 **Obeject and orientation.
 The People project were implemented with:
