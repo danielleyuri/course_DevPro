@@ -15,6 +15,14 @@ class People:
     def finishs(self):
         return f'Bye {id(self)}'
 
+    @staticmethod
+    def static_method():
+        return 42
+
+    @classmethod
+    def class_name_and_attribute(cls):
+        return f'{cls} - eyes {cls.eyes}'
+
 
 if __name__ == '__main__':
     shiny = People(name='Shiny')
@@ -37,6 +45,7 @@ if __name__ == '__main__':
     print(luna.eyes)
     print(shiny.eyes)
     print(id(People.eyes), id(luna.eyes), id(shiny.eyes))
-
+    print(People.static_method(), luna.static_method())
+    print(People.class_name_and_attribute(), luna.class_name_and_attribute())
     print(People.finish(luna))
     print(People.finishs(luna))
