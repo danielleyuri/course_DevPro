@@ -11,8 +11,8 @@ The People Project:
 *Class atributte
 *Class method
 ___________________________________________________________________________
-
 Project Car:
+---------------------------------------------------------------------------
 
 """
 You must create a car class that will have
@@ -35,77 +35,76 @@ the following attributes:
     N
 W       E
     S
-
-
-    Example:
-    >>> # Motor Test
-    >>> motor = Motor()
-    >>> motor.velocity
-    0
-    >>> motor.speedup()
-    >>> motor.velocity
-    1
-    >>> motor.speedup()
-    >>> motor.velocity
-    2
-    >>> motor.speedup()
-    >>> motor.velocity
-    3
-    >>> motor.brake()
-    >>> motor.velocity
-    1
-    >>> motor.brake()
-    >>> motor.velocity
-    0
-    >>> # Direction Test
-    >>> direction = Direction()
-    >>> direction.value
-    'North'
-    >>> direction.spin_the_right()
-    >>> direction.value
-    'East'
-    >>> direction.spin_the_right()
-    >>> direction.value
-    'South'
-    >>> direction.spin_the_right()
-    >>> direction.value
-    'West'
-    >>> direction.spin_the_right()
-    >>> direction.value
-    'North'
-    >>> direction.spin_the_left()
-    >>> direction.value
-    'West'
-    >>> direction.spin_the_left()
-    >>> direction.value
-    'South'
-    >>> direction.spin_the_left()
-    >>> direction.value
-    'East'
-    >>> direction.spin_the_left()
-    >>> direction.value
-    'North'
-    >>> car = Car (direction, motor)
-    >>> car.calculate_velocity()
-    0
-    >>> car.accelerate()
-    >>> car.accelerate_velocity()
-    1
-    >>> car.accelerate()
-    >>> car.accelerate_velocity()
-    2
-    >>> car.frear()
-    >>> car.accelerate_velocity()
-    0
-    >>> car.calculate_direction()
-    'North'
-    >>> car.spin_the_right()
-    >>> car.calculate_direction()
-    'East'
-    >>> car.spin_the_left()
-    >>> car.calculate_direction()
-    'North'
-    >>> car.spin_the_left()
-    >>> car.calculate_direction()
-    'West'
-"""
+    
+ Example:
+ >>> # Test Motor 
+ >>> motor = Motor()
+ >>> motor.velocity
+ 0
+ >>> motor.speedup()
+ >>> motor.velocity
+ 1
+ >>> motor.speedup()
+ >>> motor.velocity
+ 2
+ >>> motor.speedup()
+ >>> motor.velocity
+ 3
+ >>> motor.brake()
+ >>> motor.velocity
+ 1
+ >>> motor.brake()
+ >>> motor.velocity
+ 0
+ >> # Test Direction 
+ >>> direction = Direction()
+ >>> direction.value
+ 'North'
+ >>> direction.spin_the_right()
+ >>> direction.value
+ 'East'
+ >>> direction.spin_the_right()
+ >>> direction.value
+ 'South'
+ >>> direction.spin_the_right()
+ >>> direction.value
+ 'West'
+ >>> direction.spin_the_right()
+ >>> direction.value
+ 'North'
+ >>> direction.spin_the_left()
+ >>> direction.value
+ 'West'
+ >>> direction.spin_the_left()
+ >>> direction.value
+ 'South'
+ >>> direction.spin_the_left()
+ >>> direction.value
+ 'East'
+ >>> direction.spin_the_left()
+ >>> direction.value
+ 'North'
+ >>> car = Car (direction, motor)
+ >>> car.calculate_velocity()
+ 0
+ >>> car.accelerate()
+ >>> car.accelerate_velocity()
+ 1
+ >>> car.accelerate()
+ >>> car.accelerate_velocity()
+ 2
+ >>> car.frear()
+ >>> car.accelerate_velocity()
+ 0
+ >>> car.calculate_direction()
+ 'North'
+ >>> car.spin_the_right()
+ >>> car.calculate_direction()
+ 'East'
+ >>> car.spin_the_left()
+ >>> car.calculate_direction()
+ 'North'
+ >>> car.spin_the_left()
+ >>> car.calculate_direction()
+ 'West'
+ """
