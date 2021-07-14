@@ -1,19 +1,16 @@
 class People:
     eyes = 2
 
-    def __init__(self, *child, name=None, age=15):
+    def __init__(self, *children, name=None, age=15):
         self.age = age
         self.name = name
-        self.child = list(child)
+        self.child = list(children)
 
     def greet(self):
-        return f'Hello {id(self)}'
+        return f'Hello, my name is {self.name}.'
 
     def finish(self):
-        return f'See you later {id(self)}'
-
-    def finishs(self):
-        return f'Bye {id(self)}'
+        return f'See you later! Bye,{self.name}'
 
     @staticmethod
     def static_method():
@@ -24,28 +21,45 @@ class People:
         return f'{cls} - eyes {cls.eyes}'
 
 
+class Woman(People):
+    def greet(self):
+        greet_class = super().greet()
+        return f'{greet_class} Handshake'
+
+
+class Mutant(People):
+    eyes = 3
+
+
 if __name__ == '__main__':
-    shiny = People(name='Shiny')
-    luna = People(shiny, name='Luna')
+    shiny = Mutant(name='Shiny')
+    luna = Woman(shiny, name='Luna')
     print(People.greet(luna))
     print(id(luna))
     print(luna.greet())
     print(luna.name)
     print(luna.age)
     for childs in luna.child:
-        print(childs.name)
+        print(children.name)
     luna.lastname = 'Santos'
     del luna.child
-    luna.eyes = 1
+    luna.eyes = 2
     del luna.eyes
     print(luna.__dict__)
     print(shiny.__dict__)
-    People.eyes = 2
     print(People.eyes)
     print(luna.eyes)
     print(shiny.eyes)
     print(id(People.eyes), id(luna.eyes), id(shiny.eyes))
     print(People.static_method(), luna.static_method())
     print(People.class_name_and_attribute(), luna.class_name_and_attribute())
-    print(People.finish(luna))
-    print(People.finishs(luna))
+    people = People('Anonymus')
+    print(isinstance(people, People))
+    print(isinstance(people, Woman))
+    print(isinstance(shiny, People))
+    print(isinstance(shiny, Woman))
+    print(shiny.eyes)
+    print(luna.greet())
+    print(shiny.greet())
+    print(luna.finish())
+    print(shiny.finish())
