@@ -1,10 +1,10 @@
 class People:
     eyes = 2
 
-    def __init__(self, *children, name=None, age=15):
+    def __init__(self, *childrens, name=None, age=15):
         self.age = age
         self.name = name
-        self.child = list(children)
+        self.childrens = list(childrens)
 
     def greet(self):
         return f'Hello, my name is {self.name}.'
@@ -39,10 +39,10 @@ if __name__ == '__main__':
     print(luna.greet())
     print(luna.name)
     print(luna.age)
-    for childs in luna.child:
+    for children in luna.childrens:
         print(children.name)
     luna.lastname = 'Santos'
-    del luna.child
+    del luna.childrens
     luna.eyes = 2
     del luna.eyes
     print(luna.__dict__)
